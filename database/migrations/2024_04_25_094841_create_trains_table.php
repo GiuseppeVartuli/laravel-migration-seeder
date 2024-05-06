@@ -18,13 +18,13 @@ return new class extends Migration
             $table->string('arrival_station');
             $table->time('departure_time');
             $table->time('arrival_time');
-            $table->string('train_code')->unsigned();
+            $table->string('train_code');
             $table->text('information');
-            $table->tinyIntegery('carriages_number')->unsigned();
-            $table->string('on_time');
-            $table->smallInteger('delay')->unsigned();
-            $table->string('cancelled');
-            $table->tinyInteger('platform')->unsigned();
+            $table->tinyInteger('carriages_number');
+            $table->string('on_time')->nullable();
+            $table->smallInteger('delay')->nullable();
+            $table->string('cancelled')->nullable();
+            $table->tinyInteger('platform')->nullable();
             $table->timestamps();
         });
     }
