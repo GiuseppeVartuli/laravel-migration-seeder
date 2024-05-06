@@ -21,9 +21,9 @@ return new class extends Migration
             $table->string('train_code');
             $table->text('information');
             $table->tinyInteger('carriages_number');
-            $table->string('on_time')->nullable();
+            $table->boolean('on_time')->nullable();
             $table->smallInteger('delay')->nullable();
-            $table->string('cancelled')->nullable();
+            $table->boolean('cancelled')->nullable();
             $table->tinyInteger('platform')->nullable();
             $table->timestamps();
         });
