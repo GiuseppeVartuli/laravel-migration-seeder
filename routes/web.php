@@ -17,3 +17,5 @@ use App\Models\Train;
 */
 
 Route::get('/', [TrainController::class, 'index'])->name('home');
+
+Route::get('/partenze', [TrainController::class, 'partenze'])->name('partenze');

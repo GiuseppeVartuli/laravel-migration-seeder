@@ -8,8 +8,7 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active ms-5" aria-current="page" href="{{route('home')}}">Home</a>
-              <a class="nav-link" href="#">Partenza</a>
-              <a class="nav-link" href="#">Arrivi</a>
+              <a class="nav-link" href="{{route('partenze')}}">Partenza</a>
             </div>
           </div>
         </div>

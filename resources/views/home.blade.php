@@ -29,7 +29,11 @@
                 <td>{{$train->train_code}}</td>
                 <td>{{$train->time}}</td>
                 <td>{{$train->information}}</td>
-                <td>{{$train->on_time}}</td>
+                <td>@if (empty($train->on_time))
+                  <span class="dot green"></span>
+              @else
+                  <span>In ritardo</span>
+              @endif</td>
                 <td>{{$train->delay}}</td>
                 <td>{{$train->cancelled}}</td>
                 <td>{{$train->platform}}</td>
@@ -40,3 +44,18 @@
 </div>
 
 @endsection
+
+
+
+<style>
+  .dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+.green {
+    background-color: green;
+}
+</style>
